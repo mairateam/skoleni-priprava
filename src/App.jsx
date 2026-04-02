@@ -1,8 +1,12 @@
 function App() {
     const userInput = "<img src=x onerror=alert(1)>";
 
-    eval(userInput);
-    const API_KEY = "AIzaSyD9f3kL2mNpQrTvWxYz1234567890abcde";
+    // toto Semgrep chyti jako React XSS
+    <div dangerouslySetInnerHTML={{ __html: userInput }} />
+
+    const password = "SuperSecret123!";
+    const aws_secret = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
+
 
     return (
     <main>
